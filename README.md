@@ -1,24 +1,26 @@
 # atcoder_python
-## Description  
-* Reproduction of python3 and pypy environment in atcoder on VSCode.
-* The atcoder-cli and online-judge-tools for automated testing and submission.
 
-## Assumption
-The VS Code extension "Remote-Containers" is intended to be used.
+## 概要
+- VSCode上でAtCoderのPython3およびPyPy環境を再現します。
+- 自動テストや提出を行うためのツールとして、`atcoder-cli`と`online-judge-tools`を導入しています。
 
-## Usage
-Clone this repository
- ```
- git clone https://github.com/gomatofu/atcoder_python.git
- ```
-Open in VSCode
- ```
- code atcoder_python
- ```
-Open the command palette on VSCode and select `Remote-Containers: Reopen in Container`.
+## 前提条件
 
-Commands for question creation, automated testing, and automated testing are introduced at the following sites.  
-[atcoder-cli-command](http://tatamo.81.la/blog/2018/12/07/atcoder-cli-tutorial/)  
+- VSCodeの拡張機能「DevContainers」を使用します。
 
-I have written more details on the community blog if you would like to take a look.
-https://qiita.com/gomatofu/items/1adae9b7cd79b0f8044f
+## 使用方法
+
+1. リポジトリをクローン
+
+   ```bash
+   git clone https://github.com/gomatofu/atcoder_python.git
+   ```
+
+2. VSCodeでクローンしたディレクトリを開く
+
+   ```bash
+   code atcoder_python
+   ```
+
+3. VSCodeのコマンドパレットを開き、```Remote-Containers: Reopen in Container```を選択します。
+

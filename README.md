@@ -75,3 +75,58 @@
     oj login https://beta.atcoder.jp/
     ```
     実行後、AtCoderのログイン情報を入力してください。（初回のみ必要）
+### 各種設定
+#### accの設定
+```bash
+# 問題インストール時に全問インストールされるように変更
+acc config default-task-choice all
+# デフォルトのテンプレートをpythonに変更
+acc config default-template python
+
+```
+
+```bash
+cd `acc config-dir`
+mkdir python
+cd python
+touch template.json
+touch main.py
+code template.json
+```
+
+#### template.jsonの設定
+```json
+ {
+ "task":{
+   "program": ["main.py"],
+   "submit": "main.py"
+     }
+ }
+```
+
+#### .bashrcの設定
+```bash
+code ~/.bashrc
+```
+
+追記内容
+```bash
+# PyPy3でのテスト実施
+alias test='oj t -c "pypy3 main.py" -d ./tests/'
+# Pythonでのテスト実施
+alias test2='oj t -c "python3 main.py" -d ./tests/'
+# PyPy3での解答提出
+alias sb='acc s main.py -- --guess-python-interpreter pypy'
+# Pythonでの解答提出
+alias sb2='acc s main.py'
+# コンテストフォルダへ移動
+alias c='cd contest'
+# main.pyを開く
+alias o='code main.py'
+# 出力確認用
+alias d='python main.py'
+```
+適用
+```bash
+source ~/.bashrc
+```

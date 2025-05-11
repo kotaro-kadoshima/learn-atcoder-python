@@ -1,6 +1,6 @@
 #!/bin/bash
 # accツールのログイン
-# python python aclogin_custom.py
+python /atcoder_python/tool/aclogin_custom.py
 
 # accの設定
 acc config default-task-choice all
@@ -33,7 +33,7 @@ alias test2='oj t -c "python3 main.py" -d ./tests/'
 # PyPy3での解答提出
 alias sb='acc s main.py -- --guess-python-interpreter pypy'
 # Pythonでの解答提出
-alias sb2='acc s main.py'
+alias sb2='acc s main.py -- --guess-python-interpreter python'
 # コンテストフォルダへ移動
 alias c='cd /atcoder_python/contest'
 # main.pyを開く

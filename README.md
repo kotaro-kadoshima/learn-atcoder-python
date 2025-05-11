@@ -3,6 +3,7 @@
 ## 概要
 - VSCode上でAtCoderのPython3およびPyPy環境を再現します。
 - 自動テストや提出を行うためのツールとして、`atcoder-cli`と`online-judge-tools`を導入しています。
+- 現状、コンテストのディレクトリ作成やサンプルコードのテストを実施までできますが、提出はできません。
 
 ## 前提条件
 
@@ -124,7 +125,7 @@ alias test2='oj t -c "python3 main.py" -d ./tests/'
 # PyPy3での解答提出
 alias sb='acc s main.py -- --guess-python-interpreter pypy'
 # Pythonでの解答提出
-alias sb2='acc s main.py'
+alias sb2='acc s main.py -- --language python'
 # コンテストフォルダへ移動
 alias c='cd contest'
 # main.pyを開く

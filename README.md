@@ -48,20 +48,27 @@
      クッキーの一覧から「REVEL_SESSION」という名前の行を探します。  
      「Value」列の値をダブルクリックして選択し、右クリックしてコピーするか、`Ctrl+C`（Macなら`Cmd+C`）でコピーします。
 
-3. **`acc`の`session.json`ファイルを編集**  
-   以下のコマンドで`session.json`ファイルを開き、REVEL_SESSIONの値を設定します。
-
+3. **REVEL_SESSIONクッキーの設定**\
+   下記のコマンドを実行
    ```bash
-   code /home/vscode/.config/atcoder-cli-nodejs/session.json
+   aclogin
    ```
 
-4. **`oj`の`cookie.jar`ファイルを編集**  
-   以下のコマンドで`cookie.jar`ファイルを開き、REVEL_SESSIONの値を設定します。
-
    ```bash
-   code /home/vscode/.local/share/online-judge-tools/
+   検知されたツール:
+   - oj
+   - acc
+   AtCoder の REVEL_SESSION クッキーを貼り付けてください:
    ```
-5. **コマンドを使用してログイン**  
+   とでるので、REVEL_SESSIONを貼り付ける
+   ```bash
+   ✅ oj: クッキーを /home/vscode/.local/share/online-judge-tools/cookie.jar に保存しました
+   ✅ acc: クッキーを /home/vscode/.config/atcoder-cli-nodejs/session.json に保存しました
+   ✅ すべてのツール (2/2) にクッキーを保存しました
+   ```
+   と出力されれば完了
+
+4. **コマンドを使用してログイン**  
 以下のコマンドを実行して、`atcoder-cli`および`online-judge-tools`でログイン作業を行います。
 
 - `atcoder-cli`を使用してログイン:
@@ -82,7 +89,6 @@
 acc config default-task-choice all
 # デフォルトのテンプレートをpythonに変更
 acc config default-template python
-
 ```
 
 ```bash

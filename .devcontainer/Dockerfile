@@ -26,5 +26,5 @@ RUN python -m pip install --upgrade pip && \
     pip install --no-cache-dir -r /tmp/requirements.txt
 
 # 5) AtCoder 用ツール
-RUN pip install --no-cache-dir online-judge-tools && \
+RUN pip install --no-cache-dir online-judge-tools aclogin && \
     npm install -g atcoder-cli

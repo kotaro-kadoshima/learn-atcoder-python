@@ -6,7 +6,8 @@
   "workspaceFolder": "/atcoder_python",
   // Use this environment variable if you need to bind mount your local source code into a new container.
   "remoteEnv": {
-    "../../atcoder_python": "/atcoder_python"
+    "../../atcoder_python": "/atcoder_python",
+    "REVEL_SESSION": "${localEnv:REVEL_SESSION}"
   },
   // Set *default* container specific settings.json values on container create.
   "customizations": {
@@ -34,5 +35,6 @@
   "features": {
     // バージョン省略なら latest (=1.x 系最新)
     "ghcr.io/devcontainers/features/git:1": {}
-  }
+  },
+  "postCreateCommand": "bash /atcoder_python/tool/setup_acc.sh"
 }

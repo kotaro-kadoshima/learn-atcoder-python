@@ -7,5 +7,6 @@
             "source.organizeImports": "explicit" // import文のソート
         },
         "editor.defaultFormatter": "charliermarsh.ruff" // フォーマッターをRuffに設定
-    }
+    },
+    "github.copilot.chat.agent.autoFix": false
 }

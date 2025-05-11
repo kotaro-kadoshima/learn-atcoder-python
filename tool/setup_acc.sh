@@ -35,7 +35,7 @@ alias sb='acc s main.py -- --guess-python-interpreter pypy'
 # Pythonでの解答提出
 alias sb2='acc s main.py'
 # コンテストフォルダへ移動
-alias c='cd contest'
+alias c='cd /atcoder_python/contest'
 # main.pyを開く
 alias o='code main.py'
 # 出力確認用

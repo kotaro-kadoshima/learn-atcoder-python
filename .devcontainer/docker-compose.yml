@@ -6,6 +6,7 @@ services:
     container_name: atcoder
     environment:
       - ATCODER_REVEL_SESSION=${ATCODER_REVEL_SESSION}
+      - TZ=Asia/Tokyo
     tty: true
     volumes: 
       - ../../atcoder_python:/atcoder_python

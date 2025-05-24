@@ -25,6 +25,17 @@
 
 3. VSCodeのコマンドパレットを開き、```Remote-Containers: Reopen in Container```を選択します。
 
+##　コンテストプロジェクトの作成方法
+```
+acc new ${ContestName}
+```
+
+## .envにREVEL_SESSIONを記載して起動すれば自動でログインするようになった
+.env
+```
+ATCODER_REVEL_SESSION=${REVEL_SESSION}
+```
+
 ## ログイン方法
 
 ### 前提条件

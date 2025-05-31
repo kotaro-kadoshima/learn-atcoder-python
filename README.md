@@ -27,6 +27,8 @@
 
 ## コンテストプロジェクトの作成方法
 ```
+# contestディレクトリに移動
+cd c
 acc new ${ContestName}
 ```
 

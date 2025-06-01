@@ -29,8 +29,12 @@
 ```
 # contestディレクトリに移動
 cd c
+# コンテスト用のディレクトリを作成
 acc new ${ContestName}
 ```
+   コンテスト名はコンテストサイトURLにあります。
+   ```https://atcoder.jp/contests/◯◯◯◯◯```
+   こちらの`◯◯◯◯◯`にあたります。
 
 ## .envにREVEL_SESSIONを記載
 .env

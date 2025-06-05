@@ -17,3 +17,5 @@ c = [0] * Q
 d = [0] * Q
 for i in range(Q):
     a[i], b[i], c[i], d[i] = map(int, input().split())
+
+grid = [[0] * (y_max + 2) for _ in range(x_max + 2)]

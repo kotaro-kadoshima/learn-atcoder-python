@@ -155,3 +155,4 @@ alias d='python main.py'
 ```bash
 source ~/.bashrc
 ```
+

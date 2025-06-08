@@ -18,4 +18,20 @@ d = [0] * Q
 for i in range(Q):
     a[i], b[i], c[i], d[i] = map(int, input().split())
 
-grid = [[0] * (y_max + 2) for _ in range(x_max + 2)]
+# x座標とz座標を累積和に見立てる
+S = [[0] * (y_max + 2) for _ in range(x_max + 2)]
+for i in range(N):
+    S[X[i]][Y[i]] += 1
+
+# 累積和
+T = [[0] * (y_max + 2) for _ in range(x_max + 2)]
+for i in range(x_max):
+    for j in range(y_max):
+        T[i][j] = T[i][j - 1] + S[i][j]
+
+for j in range(y_max):
+    for i in range(x_max):
+        T[i][j] = T[i - 1][j] + T[i][j]
+
+for i in range(Q):
+    print(T[a[i - 1]][c[i - 1]] + T[c[i]][d[i]] - T[c[i][b[i - 1]]] - T[c[i] - 1][d[i]])

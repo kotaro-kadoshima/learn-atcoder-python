@@ -18,20 +18,21 @@ d = [0] * Q
 for i in range(Q):
     a[i], b[i], c[i], d[i] = map(int, input().split())
 
-# x座標とz座標を累積和に見立てる
+# 1-indexedで累積和テーブルを作成
 S = [[0] * (y_max + 2) for _ in range(x_max + 2)]
 for i in range(N):
     S[X[i]][Y[i]] += 1
 
-# 累積和
+# T: 2次元累積和テーブル
 T = [[0] * (y_max + 2) for _ in range(x_max + 2)]
-for i in range(x_max):
-    for j in range(y_max):
+for i in range(1, x_max + 2):
+    for j in range(1, y_max + 2):
         T[i][j] = T[i][j - 1] + S[i][j]
-
-for j in range(y_max):
-    for i in range(x_max):
-        T[i][j] = T[i - 1][j] + T[i][j]
+for i in range(1, x_max + 2):
+    for j in range(1, y_max + 2):
+        T[i][j] += T[i - 1][j]
 
 for i in range(Q):
-    print(T[a[i - 1]][c[i - 1]] + T[c[i]][d[i]] - T[c[i][b[i - 1]]] - T[c[i] - 1][d[i]])
+    # 1-indexedでクエリを処理
+    ans = T[a[i] - 1][b[i] - 1] + T[c[i]][d[i]] - T[c[i]][b[i] - 1] - T[a[i] - 1][d[i]]
+    print(ans)

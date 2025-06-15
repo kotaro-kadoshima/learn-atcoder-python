@@ -16,11 +16,11 @@ for i in range(N):
     X[C[i] + 1][D[i] + 1] += 1
 
 # 累積和を計算
-for i in range(1, W + 1):
-    for j in range(1, H + 1):
+for i in range(1, H + 1):
+    for j in range(1, W + 1):
         Z[i][j] = X[i][j] + Z[i][j - 1]
-for j in range(1, H + 1):
-    for i in range(1, W + 1):
+for j in range(1, W + 1):
+    for i in range(1, H + 1):
         Z[i][j] = Z[i][j] + Z[i - 1][j]
 
 # 出力
